@@ -11,6 +11,12 @@
     font-style: normal;
 }
 @font-face {
+	font-family: Raleway-Bold;
+	src: url(font/Raleway-Bold.ttf);
+	font-weight: normal;
+    font-style: normal;
+}
+@font-face {
 	font-family: Raleway-Light;
 	src: url(font/Raleway-Light.ttf);
 	font-weight: normal;
@@ -41,7 +47,7 @@ p, ul, li, a, h1 {
 	min-height: 750px;
 	background: url(img/banner.jpg) 50% 50%;
 	color: #fff;
-	font-family: Raleway-Regular;
+	font-family: Raleway-Regular, sans-serif;
 	font-size: 22px;
 	background-size: cover; 
 }
@@ -93,4 +99,44 @@ header {
 	white-space: nowrap;
 	padding: 15px 40px;
 	margin-top: 77px;
+}
+.features {
+	background-color: #ffffff;
+	width: 100%;
+	min-height: 690px;
+}
+.features-content {
+	min-height: 447px;
+	max-width: 1075px;
+	margin: auto;
+	padding-top: 120px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+.features-block {
+	text-align: center;
+}
+.features-block h5 {
+	font-family: Raleway-Bold;
+	font-size: 15px;
+}
+.features-block p {
+	font-family: Raleway-Regular, sans-serif;
+	font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+.works {
+	background-color: black;
+	min-height: 701px;
 }
