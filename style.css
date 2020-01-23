@@ -54,14 +54,28 @@ p, ul, li, a, h1, h2, h3, h4, h5 {
 header {
 	width: 100%;
 }
-.header-content {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.header-fixed {
+	position: fixed;
 	margin: auto;
 	max-width: 1170px;
 	border-bottom: 1px solid rgba(255,255,255,0.25);
 	padding: 40px 0px;
+	left: 0;
+	right: 0;
+}
+.header-fixed.fixed {
+	background: #2b2e4a;
+	border: 0;
+	padding: 25px;
+	transition: padding 0.7s;
+	max-width: 100%;
+}
+.header-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 1170px;
+	margin: auto;
 }
 .navihation ul li {
 	list-style: none;
@@ -76,7 +90,7 @@ header {
 }
 .text-masthead {
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 250px;
 }
 .text-masthead h1 {
 	text-align: center;
