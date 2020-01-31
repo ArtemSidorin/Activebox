@@ -101,9 +101,8 @@ header {
 	padding-bottom: 20px;
 	line-height: 1.1;
 }
-.masthead-bottom {
-	display: inline-block;
-	text-decoration: none;
+.masthead-button {
+	cursor: pointer;
 	color: #fff;
 	background-color: #e84545;
 	border-radius: 3px;
@@ -112,6 +111,7 @@ header {
 	font-weight: 550;
 	padding: 15px 40px;
 	margin-top: 77px;
+	border: 0;
 }
 #features {
 	background-color: #ffffff;
@@ -219,9 +219,7 @@ header {
 	font-family: Raleway-Bold, sans-serif;
 	font-size: 13px;
 }
-.download-block a {
-	display: inline-block;
-	text-decoration: none;
+.download-block .download-button {
 	color: #fff;
 	background-color: #e84545;
 	border-radius: 3px;
@@ -230,6 +228,11 @@ header {
 	font-weight: 550;
 	padding: 18px 83px;
 	margin-top: 40px;
+	border: 0;
+}
+.masthead-button:hover, .download-button:hover {
+	background-color: #d01414;
+	transition: 1s;
 }
 .footer-content {
 	background: #3a3e64;
@@ -242,7 +245,6 @@ header {
 	max-width: 1017px;
 	margin: auto;
 	padding-top: 71px; 
-
 }
 .footer-block h5 {
 	text-align: center;
@@ -269,7 +271,8 @@ header {
 	width: 36px;
 	height: 36px;
 	border: 2px solid #e8ecee;
-	padding: 0 1px;
+	border-radius: 2px;
+	margin: 0 2px;
 }
 .footer-link .fb {
 	background: url(img/fb-icon-footer.png) 50% 50% no-repeat;
