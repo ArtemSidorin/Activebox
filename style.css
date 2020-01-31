@@ -196,7 +196,7 @@ header {
 .team-link .in {
 	background: url(img/in-icon.png) 50% 50% no-repeat;
 }
-.clients {
+#clients {
 	min-height: 500px;
 	background: #565239;
 	width: 100%;
@@ -258,6 +258,12 @@ header {
 	font-size: 14px;
     line-height: 1.5;
 }
+.footer-container .center-block-margin {
+	margin-left: 110px;
+}
+.footer-container .left-block-margin {
+	margin-left: 70px;
+}
 .footer-link a {
 	display: inline-block;
 	width: 36px;
@@ -280,6 +286,20 @@ header {
 	height: 94px;
 	text-align: center;
 }
+.copyright p {
+	color: #808080;
+	padding-top: 29px;
+	font-family: Raleway-Regular, sans-serif; 
+	font-size: 14px;
+}
+.copyright p span {
+	color: #ffffff;
+	line-height: 1.5;
+}
+.copyright img {
+	vertical-align: middle;
+}
+
 
 
 
