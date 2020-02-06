@@ -2,37 +2,37 @@
 	font-family: Raleway-Regular;
 	src: url(font/Raleway-Regular.ttf);
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Raleway-SemiBold;
 	src: url(font/Raleway-SemiBold.ttf);
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Raleway-Bold;
 	src: url(font/Raleway-Bold.ttf);
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Raleway-Light;
 	src: url(font/Raleway-Light.ttf);
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: Raleway-Black;
 	src: url(font/Raleway-Black.ttf);
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
 }
 @font-face {
 	font-family: OpenSans-Bold;
 	src: url(font/OpenSans-Bold.ttf);
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
 }
 body {
 	width: 100%;
@@ -138,20 +138,91 @@ header {
 .features-block p {
 	font-family: Raleway-Regular, sans-serif;
 	font-size: 14px;
-    line-height: 1.4;
+	line-height: 1.4;
 }
 #works {
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 	display: grid;
 	grid-gap: 0.5px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: repeat(2, 350px);
 }
-#works .work img {
-	width: 100%;
+.photobox{
+	--photoboxOverlay: rgba(232, 69, 69, 0.9);
+	position: relative;
+	overflow: hidden;
+}
+.photobox-preview{
+	max-width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+.photobox-previewbox:before{
+	content: "";
+}
+.photobox .photobox-previewbox:before{
+	width: 100%;
+	height: 100%;
+	background-color: var(--photoboxOverlay, rgba(0, 0, 0, .8));
+	opacity: 0;
+	transition: opacity var(--photoboxAnimationDuration, .4s) cubic-bezier(0.71, 0.05, 0.29, 0.9);
+	will-change: opacity;
+	position: absolute;
+	z-index: 1;
+}
+.photobox:hover .photobox-previewbox:before{
+	opacity: 1;
+}
+.photobox .photobox-label-top,
+.photobox .photobox-label-bottom{
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: opacity calc(var(--photoboxAnimationDuration, .4s) / 4) 
+	cubic-bezier(0.71, 0.05, 0.29, 0.9), transform calc(var(--photoboxAnimationDuration, .4s) / 4) 
+	cubic-bezier(0.71, 0.05, 0.29, 0.9);
+	will-change: opacity, transform;
+}
+.photobox .photobox-label-top {
+	position: absolute;
+	top: 43.5%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	z-index: 1;
+	color: #fff;
+	font-family: Raleway-Regular, sans-serif;
+	font-weight: bold;
+}
+.photobox .photobox-label-bottom {
+	position: absolute;
+	bottom: 43.5%;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	z-index: 1;
+	color: #fff;
+	font-family: Raleway-Light, sans-serif;
+}
+.photobox:hover .photobox-label-top {
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition-duration: calc(var(--photoboxAnimationDuration, .4s) / 1.5);
+	transition-delay: calc(var(--photoboxAnimationDuration, .4s) / 1.5);
+}
+.photobox:hover .photobox-label-bottom {
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition-duration: calc(var(--photoboxAnimationDuration, .4s) / 1.5);
+	transition-delay: calc(var(--photoboxAnimationDuration, .4s) / 1.5);
+}
+.photobox .photobox-preview{
+	transition: transform var(--photoboxAnimationDuration, .4s) 
+	cubic-bezier(0.71, 0.05, 0.29, 0.9);
+	will-change: opacity, transform;
+	transform: scale(1) translate(0, 0);
+}
+.photobox:hover .photobox-preview{
+	transform: scale(1.2) translate(-3%, -3%);
 }
 #team {
 	min-height: 782px;
@@ -229,6 +300,7 @@ header {
 	padding: 18px 83px;
 	margin-top: 40px;
 	border: 0;
+	cursor: pointer;
 }
 .masthead-button:hover, .download-button:hover {
 	background-color: #d01414;
@@ -258,7 +330,7 @@ header {
 	color: #9d9fb2;
 	font-family: Raleway-Regular, sans-serif;
 	font-size: 14px;
-    line-height: 1.5;
+	line-height: 1.5;
 }
 .footer-container .center-block-margin {
 	margin-left: 110px;
@@ -309,10 +381,9 @@ header {
 
 @media (max-width: 1200px) {
 	#works { grid-template-columns: 1fr 1fr; 
-			 grid-template-rows: repeat(4, 350px);} 
-}
-@media (max-width: 765px) {
-	#works { grid-template-columns: 1fr; 
-			 grid-template-rows: repeat(8, 350px);} 
-}
-
+		grid-template-rows: repeat(4, 350px);} 
+	}
+	@media (max-width: 765px) {
+		#works { grid-template-columns: 1fr; 
+			grid-template-rows: repeat(8, 350px);} 
+		}
