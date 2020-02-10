@@ -134,6 +134,7 @@ header {
 .features-block h5 {
 	font-family: Raleway-Bold;
 	font-size: 15px;
+	padding: 20px 0 15px 0;
 }
 .features-block p {
 	font-family: Raleway-Regular, sans-serif;
@@ -152,6 +153,10 @@ header {
 	--photoboxOverlay: rgba(232, 69, 69, 0.9);
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
+}
+.photobox a {
+	cursor: pointer;
 }
 .photobox-preview{
 	max-width: 100%;
@@ -386,4 +391,4 @@ header {
 	@media (max-width: 765px) {
 		#works { grid-template-columns: 1fr; 
 			grid-template-rows: repeat(8, 350px);} 
-		}
+	}
