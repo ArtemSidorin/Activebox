@@ -101,7 +101,7 @@ header {
 	padding-bottom: 20px;
 	line-height: 1.1;
 }
-.masthead-button {
+.text-masthead button {
 	cursor: pointer;
 	color: #fff;
 	background-color: #e84545;
@@ -295,21 +295,39 @@ header {
 	font-family: Raleway-Bold, sans-serif;
 	font-size: 13px;
 }
-.download-block .download-button {
-	color: #fff;
-	background-color: #e84545;
-	border-radius: 3px;
-	font-size: 13px;
-	font-family: Raleway-SemiBold, sans-serif;
-	font-weight: 550;
-	padding: 18px 83px;
-	margin-top: 40px;
-	border: 0;
-	cursor: pointer;
+.button, .tick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  margin: 40px auto;
 }
-.masthead-button:hover, .download-button:hover {
-	background-color: #d01414;
-	transition: 1s;
+.button {
+  width: 280px;
+  height: 46px;
+  background: #e84545;
+  border-radius: 6px;
+  transition: all .3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
+}
+.tick {
+  color: white;
+  font-size: 0.7em;
+  font-family: Raleway-Regular, sans-serif; 
+  transition: all .1s;
+}
+.button svg {
+  transform: rotate(180deg);
+  transition: all .5s;
+}
+.button-circle {
+  width: 100px;
+  height: 100px;
+  background: #10f3eb;
+  border-radius: 50%;
+  transform: rotate(-180deg);
+}
+.button:hover {
+  cursor: pointer;
 }
 .footer-content {
 	background: #3a3e64;
