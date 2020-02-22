@@ -279,6 +279,7 @@ header {
 	background: url(img/in-icon.png) 50% 50% no-repeat;
 }
 .slider {
+<<<<<<< HEAD
 	width: 100%;
 	min-height: 500px;
 	display: flex;
@@ -309,7 +310,83 @@ header {
 .slider-text p+p {
 	font-family: Raleway-Bold, sans-serif;
 	font-size: 13px;
+=======
+	width: 100%;
+ 	min-height: 500px;
+	overflow: hidden;
+	position: relative;
 }
+.slider ul,
+.slider li {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.slider ul {
+	width: 200%; 
+	display: flex;
+}
+.slider ul li {
+	list-style-type: none;
+	width: 100%;
+	height: 500px;
+	display: flex;
+}
+.slider .text {
+	background: black;
+	width: 50%;
+>>>>>>> 2321ad2b207955f8561ddd979d904443b5148e5d
+}
+.slider ul li img {
+	
+}
+.slider .nav {
+	position: absolute;
+	left: 50%;
+	bottom: 12px; 
+}
+.slider .nav span {
+	opacity: 0.4;
+	background: #fff;
+	margin: 0 8px 0 0;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	overflow: hidden;
+	display: block;
+	float: left;
+	box-shadow: 0 1px 2px #000;
+}
+.slider .nav span.on {
+	background: #2e9419;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #download {
 	height: 340px;
 	width: 100%;
