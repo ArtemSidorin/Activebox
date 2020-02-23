@@ -279,7 +279,6 @@ header {
 	background: url(img/in-icon.png) 50% 50% no-repeat;
 }
 .slider {
-<<<<<<< HEAD
 	width: 100%;
 	min-height: 500px;
 	display: flex;
@@ -310,83 +309,48 @@ header {
 .slider-text p+p {
 	font-family: Raleway-Bold, sans-serif;
 	font-size: 13px;
-=======
 	width: 100%;
- 	min-height: 500px;
-	overflow: hidden;
-	position: relative;
 }
-.slider ul,
-.slider li {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-}
-.slider ul {
-	width: 200%; 
-	display: flex;
-}
-.slider ul li {
-	list-style-type: none;
-	width: 100%;
-	height: 500px;
-	display: flex;
-}
-.slider .text {
-	background: black;
-	width: 50%;
->>>>>>> 2321ad2b207955f8561ddd979d904443b5148e5d
-}
-.slider ul li img {
-	
-}
-.slider .nav {
+.my-dots {
 	position: absolute;
-	left: 50%;
-	bottom: 12px; 
+	top: 75%;
+	left: 65%;
 }
-.slider .nav span {
-	opacity: 0.4;
-	background: #fff;
-	margin: 0 8px 0 0;
-	width: 16px;
-	height: 16px;
-	border-radius: 8px;
+.my-dots li {
+	position: relative;
+	display: inline-block;
+	margin: 0 5px;
 	cursor: pointer;
-	overflow: hidden;
+}
+.my-dots li button {
+	font-size: 0;
+	line-height: 0;
 	display: block;
-	float: left;
-	box-shadow: 0 1px 2px #000;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	background: transparent;
 }
-.slider .nav span.on {
-	background: #2e9419;
+.my-dots li button:hover,
+.my-dots li button:focus {
+	outline: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.my-dots li button:hover:before,
+.my-dots li button:focus:before {
+	opacity: 1;
+}
+.my-dots li button:before {
+	font-family: 'slick';
+	font-size: 12px;
+	line-height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '•';
+	opacity: .25;
+	color: #fff; 
+}
 #download {
 	height: 340px;
 	width: 100%;
@@ -505,9 +469,6 @@ header {
 .copyright img {
 	vertical-align: middle;
 }
-
-
-
 
 
 @media (max-width: 1200px) {
