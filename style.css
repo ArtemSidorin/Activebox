@@ -475,10 +475,6 @@ header {
 	#works { grid-template-columns: 1fr 1fr; 
 		grid-template-rows: repeat(4, 350px);} 
 	}
-	@media (max-width: 765px) {
-		#works { grid-template-columns: 1fr; 
-			grid-template-rows: repeat(8, 350px);} 
-	}
 	@media (max-width: 900px) {
 		.overlay-navigation {
 			position: fixed;
@@ -764,3 +760,14 @@ header {
 			}
 		}
 	}
+	@media (max-width: 875px) {
+		.text-masthead button {margin: 50px;} 
+		.text-masthead {padding: 200px 0px 0px;} 
+		}
+
+
+
+	@media (max-width: 765px) {
+		#works { grid-template-columns: 1fr; 
+			grid-template-rows: repeat(8, 350px);} 
+		}
