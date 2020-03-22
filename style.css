@@ -242,13 +242,13 @@ header {
 }
 .team-content {
 	min-height: 580px;
-	max-width: 1170px;
+	max-width: auto;
 	display: flex;
 	margin: auto;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-content: space-between;
-	padding: 101px;
+	padding: 101px 5px;
 	font-family: Raleway-Regular, sans-serif;
 }
 .team-content h4 {
@@ -264,11 +264,20 @@ header {
 	font-size: 14px;
 	line-height: 1.4;
 }
+.team-block {
+    margin: 0 10px;
+}
 .team-link a {
 	display: inline-block;
 	width: 38px;
 	height: 38px;
 	border: 1px solid #e8ecee;
+    border-radius: 4px;
+}
+.team-link a:hover {
+    background-color: #e84545;
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
 .team-link .fb {
 	background: url(img/fb-icon.png) 50% 50% no-repeat;
@@ -491,7 +500,6 @@ header {
 	}
 
 
-
 	@media (max-width: 1200px) {
 		#works { grid-template-columns: 1fr 1fr; 
 				grid-template-rows: repeat(4, 350px);} 
@@ -500,6 +508,15 @@ header {
 		#works { grid-template-columns: 1fr; 
 			grid-template-rows: repeat(8, 350px);} 
 	}
+
+    @media (max-width: 1186px) {
+        .team-block {width: 400px; text-align: center;}
+        .team-block:nth-child(1), .team-block:nth-child(2) {padding-bottom: 50px}
+    }
+    @media (max-width: 867px) {
+        .team-block {padding-bottom: 50px;}
+        .team-content {padding-bottom: 51px;}
+    }
 
 
 
