@@ -272,11 +272,6 @@ p, ul, li, a, h1, h2, h3, h4, h5 {
 	border: 1px solid #e8ecee;
     border-radius: 4px;
 }
-.team-link a:hover {
-    background-color: #e84545;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-}
 .team-link .fb {
 	background: url(img/fb-icon.png) 50% 50% no-repeat;
 }
