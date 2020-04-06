@@ -693,7 +693,6 @@ p, ul, li, a, h1, h2, h3, h4, h5 {
         text-align: center;
         font-size: 10px;
         font-weight: bold;
-        letter-spacing: 2px;
     }
 
     .navihation li a:before {
@@ -801,6 +800,10 @@ p, ul, li, a, h1, h2, h3, h4, h5 {
         animation: slide-in-nav-item-reverse .3s linear 1 both;
     }
 
+@media (max-width: 600px) {
+ 	.navihation ul li a {letter-spacing: 2px;}
+
+}
     /*Burger*/
     .open-overlay {
         position: fixed;
